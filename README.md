@@ -14,7 +14,7 @@ This script was designed for the Python 2.7.10 interpreter.
 
 Run the script from the command line with a filename containing the asteroid coordinates.
 
-```command line
+```
 python solution.py [path to input file]
 ```
 
