@@ -26,14 +26,15 @@ The files must be formatted as follows:
 
 Given an asteroid field, the asteroid with the best view of the others will lie somewhere on the 
 perimeter of the field. Therefore, to begin with, we must determine which asteroids lie on the perimeter, 
-which is known as the "convex hull" in mathematics. Think of the convex hull as the points that would 
-touch an elastic band, if one were stretched around the group of asteroids.
+which is known as the "[convex hull](https://en.wikipedia.org/wiki/Convex_hull)" in mathematics. Think of the 
+convex hull as the points that would touch an elastic band, if one were stretched around the group of asteroids.
 
-For this solution, we use the Graham Scan to systematically go through the asteroids and determine which
-ones are on the convex hull. This approach goes asteroid by asteroid, going from lowest X to highest X, and
-determining whether we're making a left, straight, or right turn at each point, relative to the vector of 
-the previous two points. If the turn is straight or right, we discard the previous asteroid and repeat. Once
-this process is completed for all the asteroids, we will have the asteroids that make up the convex hull.
+For this solution, we use the [Graham Scan](https://en.wikipedia.org/wiki/Graham_scan) to systematically go 
+through the asteroids and determine which ones are on the convex hull. This approach goes asteroid by asteroid, 
+going from lowest X to highest X, and determining whether we're making a left, straight, or right turn at each 
+point, relative to the vector of the previous two points. If the turn is straight or right, we discard the 
+previous asteroid and repeat. Once this process is completed for all the asteroids, we will have the asteroids 
+that make up the convex hull.
 
 Next, for each asteroid in the convex hull, we calculate the angle of view between the previous and next
 asteroids on the convex hull. Once each asteroid has been assigned its angle of view, we choose the one
