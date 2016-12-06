@@ -17,13 +17,8 @@ if not os.path.isfile(sys.argv[1]):
 # Validate and import data from the file.
 file = File(sys.argv[1])
 
-# Create all the asteroids from the file.
-asteroids = []
-for coordinates in file.lines_as_coordinates:
-    asteroids.append([coordinates[0], coordinates[1]])
-
 # Create an object with our list of asteroids.
-asteroid_group = AsteroidGroup(asteroids)
+asteroid_group = AsteroidGroup(file.lines_as_coordinates)
 
 # Find asteroid with narrowest angle of view relative to the others and prints its coordinates to standard out.
 asteroid_group.choose_asteroid()
