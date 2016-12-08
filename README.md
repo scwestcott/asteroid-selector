@@ -2,6 +2,8 @@
 
 ## Purpose
 
+This project is a porfolio piece for Stephan Westcott, and serves no other practical purpose.
+
 We're exploring a group of asteroids that are well behaved in that they all move in the same  
 plane and are static to one another. A space craft, equipped with measuring devices, will land  
 on one of the asteroids to perform all sorts of experiments. This script chooses the ideal  
